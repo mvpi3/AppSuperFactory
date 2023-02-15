@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking/AFNetworking.h>
 
 #import "AFBaseTableView.h"
 #import "AFBaseViewController.h"

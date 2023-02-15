@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AFApiResponse.h"
 #import "LibsHeader.h"
-
+/*
 @interface AFHTTPSessionManager(AFExtension)
 
 +(AFHTTPSessionManager *)newDefaultManager;
@@ -54,3 +54,4 @@
                   completion:(void (^)(AFApiResponse *res))completion;
 
 @end
+*/

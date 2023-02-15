@@ -8,7 +8,6 @@
 
 #import <Masonry/Masonry.h>
 #import <ViewUtils/ViewUtils.h>
-#import <AFNetworking/AFNetworking.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "BlocksKit+UIKit.h"
 #import "BlocksKit.h"

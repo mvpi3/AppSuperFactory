@@ -11,7 +11,7 @@
 
 typedef void (^PostHandlerBlockType)(AFApiResponse *res);
 static const char PostHandlerBlockKey;
-
+/*
 @implementation AFHTTPSessionManager(AFExtension)
 
 +(AFHTTPSessionManager *)newDefaultManager
@@ -156,3 +156,4 @@ static const char PostHandlerBlockKey;
 }
 
 @end
+*/

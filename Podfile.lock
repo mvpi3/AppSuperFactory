@@ -1,20 +1,5 @@
 PODS:
   - ActionSheetPicker-3.0 (2.2.0)
-  - AFNetworking (4.0.1):
-    - AFNetworking/NSURLSession (= 4.0.1)
-    - AFNetworking/Reachability (= 4.0.1)
-    - AFNetworking/Security (= 4.0.1)
-    - AFNetworking/Serialization (= 4.0.1)
-    - AFNetworking/UIKit (= 4.0.1)
-  - AFNetworking/NSURLSession (4.0.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (4.0.1)
-  - AFNetworking/Security (4.0.1)
-  - AFNetworking/Serialization (4.0.1)
-  - AFNetworking/UIKit (4.0.1):
-    - AFNetworking/NSURLSession
   - ArrayUtils (1.3)
   - Aspects (1.4.1)
   - DACircularProgress (2.3.1)
@@ -65,7 +50,6 @@ PODS:
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0 (= 2.2.0)
-  - AFNetworking (~> 4.0)
   - ArrayUtils (~> 1.3)
   - Aspects (~> 1.4.1)
   - DACircularProgress
@@ -91,7 +75,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - ActionSheetPicker-3.0
-    - AFNetworking
     - ArrayUtils
     - Aspects
     - DACircularProgress
@@ -119,7 +102,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
-  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   ArrayUtils: 1444c5aab693bf1c8bde31145e10fc7c5cf930bf
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
@@ -145,6 +127,6 @@ SPEC CHECKSUMS:
   UIDeviceIdentifier: f33af270ba9045ea18b31d9aab88e42a0082ea67
   ViewUtils: 68e42c708a4b3912e39691cef5080282dc5013fb
 
-PODFILE CHECKSUM: 44b26764a5c0c12292116827ab62d914bc4e3401
+PODFILE CHECKSUM: c339e52ddf468d152b65a54bb801e24e6bcbc1c8
 
 COCOAPODS: 1.11.3
