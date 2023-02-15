@@ -79,7 +79,6 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     UIView *_bgView;
 
     // Actions
-    UIActionSheet *_actionsSheet;
     UIActivityViewController *activityViewController;
 
     // Control
@@ -113,7 +112,6 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 }
 
 // Private Properties
-@property (nonatomic, strong) UIActionSheet *actionsSheet;
 @property (nonatomic, strong) UIActivityViewController *activityViewController;
 
 // Private Methods
@@ -174,13 +172,13 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 // Properties
 @synthesize displayDoneButton = _displayDoneButton, displayToolbar = _displayToolbar, displayActionButton = _displayActionButton, displayCounterLabel = _displayCounterLabel, useWhiteBackgroundColor = _useWhiteBackgroundColor, doneButtonImage = _doneButtonImage;
 @synthesize leftArrowImage = _leftArrowImage, rightArrowImage = _rightArrowImage, leftArrowSelectedImage = _leftArrowSelectedImage, rightArrowSelectedImage = _rightArrowSelectedImage, actionButtonImage = _actionButtonImage, actionButtonSelectedImage = _actionButtonSelectedImage;
-@synthesize displayArrowButton = _displayArrowButton, actionButtonTitles = _actionButtonTitles;
+@synthesize displayArrowButton = _displayArrowButton;
 @synthesize arrowButtonsChangePhotosAnimated = _arrowButtonsChangePhotosAnimated;
 @synthesize forceHideStatusBar = _forceHideStatusBar;
 @synthesize usePopAnimation = _usePopAnimation;
 @synthesize disableVerticalSwipe = _disableVerticalSwipe;
 @synthesize dismissOnTouch = _dismissOnTouch;
-@synthesize actionsSheet = _actionsSheet, activityViewController = _activityViewController;
+@synthesize activityViewController = _activityViewController;
 @synthesize trackTintColor = _trackTintColor, progressTintColor = _progressTintColor;
 @synthesize delegate = _delegate;
 
@@ -236,10 +234,6 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 
         _doneButtonSize = CGSizeMake(55.f, 26.f);
 
-		if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
-            self.automaticallyAdjustsScrollViewInsets = NO;
-		}
-		
         _applicationWindow = [[[UIApplication sharedApplication] delegate] window];
 		self.modalPresentationStyle = UIModalPresentationCustom;
 		self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
@@ -642,6 +636,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 	CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
 	_pagingScrollView = [[UIScrollView alloc] initWithFrame:pagingScrollViewFrame];
     //_pagingScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    _pagingScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 	_pagingScrollView.pagingEnabled = YES;
 	_pagingScrollView.delegate = self;
 	_pagingScrollView.showsHorizontalScrollIndicator = NO;
@@ -1409,70 +1404,33 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     id <IDMPhoto> photo = [self photoAtIndex:_currentPageIndex];
 
     if ([self numberOfPhotos] > 0 && [photo underlyingImage]) {
-        if(!_actionButtonTitles)
-        {
-            // Activity view
-            NSMutableArray *activityItems = [NSMutableArray arrayWithObject:[photo underlyingImage]];
-            if (photo.caption) [activityItems addObject:photo.caption];
-
-            self.activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
-
-            __typeof__(self) __weak selfBlock = self;
-
-			[self.activityViewController setCompletionWithItemsHandler:^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
-				[selfBlock hideControlsAfterDelay];
-				selfBlock.activityViewController = nil;
-			}];
-
-			if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-				[self presentViewController:self.activityViewController animated:YES completion:nil];
-			}
-			else { // iPad
-				UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:self.activityViewController];
-				[popover presentPopoverFromRect:CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, 0, 0)
-										 inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny
-									   animated:YES];
-			}
+        // Activity view
+        NSMutableArray *activityItems = [NSMutableArray arrayWithObject:[photo underlyingImage]];
+        if (photo.caption) [activityItems addObject:photo.caption];
+        
+        self.activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        
+        __typeof__(self) __weak selfBlock = self;
+        
+        [self.activityViewController setCompletionWithItemsHandler:^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
+            [selfBlock hideControlsAfterDelay];
+            selfBlock.activityViewController = nil;
+        }];
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            [self presentViewController:self.activityViewController animated:YES completion:nil];
         }
-        else
-        {
-            // Action sheet
-            self.actionsSheet = [UIActionSheet new];
-            self.actionsSheet.delegate = self;
-            for(NSString *action in _actionButtonTitles) {
-                [self.actionsSheet addButtonWithTitle:action];
-            }
-
-            self.actionsSheet.cancelButtonIndex = [self.actionsSheet addButtonWithTitle:IDMPhotoBrowserLocalizedStrings(@"Cancel")];
-            self.actionsSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
-
-            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-				[_actionsSheet showInView:self.view];
-            } else {
-                [_actionsSheet showFromBarButtonItem:sender animated:YES];
-            }
+        else { // iPad
+            self.activityViewController.modalPresentationStyle = UIModalPresentationPopover;
+            self.activityViewController.popoverPresentationController.sourceView = self.view;
+            self.activityViewController.popoverPresentationController.sourceRect = CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, 0, 0);
+            self.activityViewController.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+            [self presentViewController:self.activityViewController animated:YES completion:nil];
         }
-
+        
         // Keep controls hidden
         [self setControlsHidden:NO animated:YES permanent:YES];
     }
-}
-
-#pragma mark - Action Sheet Delegate
-
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (actionSheet == _actionsSheet) {
-        self.actionsSheet = nil;
-
-        if (buttonIndex != actionSheet.cancelButtonIndex) {
-            if ([_delegate respondsToSelector:@selector(photoBrowser:didDismissActionSheetWithButtonIndex:photoIndex:)]) {
-                [_delegate photoBrowser:self didDismissActionSheetWithButtonIndex:buttonIndex photoIndex:_currentPageIndex];
-                return;
-            }
-        }
-    }
-
-    [self hideControlsAfterDelay]; // Continue as normal...
 }
 
 #pragma mark - pop Animation

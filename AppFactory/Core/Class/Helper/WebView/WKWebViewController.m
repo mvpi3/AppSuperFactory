@@ -86,14 +86,14 @@
     NSURL *url = navigationAction.request.URL;
     
     if ([url.scheme hasPrefix:@"itms-appss"]) {
-        [[UIApplication sharedApplication] openURL:url];
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         decisionHandler(WKNavigationActionPolicyCancel);
         [self dismissViewControllerAnimated:YES completion:nil];
         return;
     }
     // Protocol/URL-Scheme without http(s)
     else if (url.scheme && ![url.scheme hasPrefix:@"http"]) {
-        [[UIApplication sharedApplication] openURL:url];
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
     }

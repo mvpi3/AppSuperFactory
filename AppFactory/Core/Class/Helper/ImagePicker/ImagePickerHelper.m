@@ -187,7 +187,7 @@
                                         if(block){block(NO);}
                                     } otherHandler:^(UIAlertAction *action) {
                                         NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-                                        [[UIApplication sharedApplication] openURL:url];
+                                        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
                                         if(block){block(NO);}
                                     }];
     };

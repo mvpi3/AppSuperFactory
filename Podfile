@@ -54,6 +54,7 @@ end
         target.build_settings(configuration.name)['VALID_ARCHS'] = '$(ARCHS_STANDARD)'
         target.build_settings(configuration.name)['ONLY_ACTIVE_ARCH'] = 'NO'
         configuration.build_settings['SWIFT_VERSION'] = '4.0'
+        configuration.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
       end
     end
   end

@@ -64,7 +64,7 @@
     NSURL *url = [NSURL URLWithString:fbProfileURL];
     
     if([[UIApplication sharedApplication] canOpenURL:url]){
-        [[UIApplication sharedApplication] openURL:url];
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     }else{
         NSString *webUrl = [NSString stringWithFormat:@"https://www.facebook.com/%@",fbId];
         [WebControllerHelper showWithURLStr:webUrl on:viewController];

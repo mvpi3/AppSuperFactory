@@ -30,7 +30,7 @@
 @end
 
 // IDMPhotoBrowser
-@interface IDMPhotoBrowser : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate>
+@interface IDMPhotoBrowser : UIViewController <UIScrollViewDelegate>
 
 // Properties
 @property (nonatomic, strong) id <IDMPhotoBrowserDelegate> delegate;
@@ -40,7 +40,6 @@
 @property (nonatomic) BOOL displayCounterLabel;
 @property (nonatomic) BOOL displayArrowButton;
 @property (nonatomic) BOOL displayActionButton;
-@property (nonatomic, strong) NSArray *actionButtonTitles;
 @property (nonatomic, weak) UIImage *leftArrowImage, *leftArrowSelectedImage;
 @property (nonatomic, weak) UIImage *rightArrowImage, *rightArrowSelectedImage;
 @property (nonatomic, weak) UIImage *actionButtonImage, *actionButtonSelectedImage;

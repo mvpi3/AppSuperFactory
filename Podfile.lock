@@ -39,7 +39,7 @@ PODS:
     - PINCache/Core
   - PINCache/Core (3.0.3):
     - PINOperation (~> 1.2.1)
-  - PINOperation (1.2.1)
+  - PINOperation (1.2.2)
   - pop (1.0.12)
   - PPTopMostController (0.0.1)
   - PromiseKit (6.9.0):
@@ -56,11 +56,11 @@ PODS:
     - HexColors (~> 4.0)
     - PPTopMostController
   - SAMKeychain (1.5.3)
-  - SDWebImage (5.12.5):
-    - SDWebImage/Core (= 5.12.5)
-  - SDWebImage/Core (5.12.5)
+  - SDWebImage (5.15.2):
+    - SDWebImage/Core (= 5.15.2)
+  - SDWebImage/Core (5.15.2)
   - SVProgressHUD (2.2.5)
-  - UIDeviceIdentifier (2.0.0)
+  - UIDeviceIdentifier (2.2.0)
   - ViewUtils (1.1.2)
 
 DEPENDENCIES:
@@ -119,7 +119,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   ArrayUtils: 1444c5aab693bf1c8bde31145e10fc7c5cf930bf
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
@@ -133,18 +133,18 @@ SPEC CHECKSUMS:
   NSHash: 036c03781d372c288d332b512b203e7bb832e46e
   ObjcAssociatedObjectHelpers: 686c291f292c26a49b9b1fa7d58130a8d35d59d2
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
-  PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
+  PINOperation: daa34d4aa1d8449089be7d405b9d974abc4724c6
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   PPTopMostController: 4e6f1e5f8c645bdcc74cd837a20f607ff262c048
   PromiseKit: 97397236f9e9c443d5b70a941d49cad25160af7a
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   RMessage: 31d44bd26a8f353f987d2e7194f3e9ffb203cbf2
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
-  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  SDWebImage: 8ab87d4b3e5cc4927bd47f78db6ceb0b94442577
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  UIDeviceIdentifier: af4e11e25a2ea670078e2bd677bb0e8144f9f063
+  UIDeviceIdentifier: f33af270ba9045ea18b31d9aab88e42a0082ea67
   ViewUtils: 68e42c708a4b3912e39691cef5080282dc5013fb
 
-PODFILE CHECKSUM: 65b7bcaaa4a3a4b7cdfcde8ee5a76599dab02802
+PODFILE CHECKSUM: 44b26764a5c0c12292116827ab62d914bc4e3401
 
 COCOAPODS: 1.11.3

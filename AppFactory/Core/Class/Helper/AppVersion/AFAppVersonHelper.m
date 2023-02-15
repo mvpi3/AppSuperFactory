@@ -92,11 +92,7 @@
     NSURL *iTunesURL = [NSURL URLWithString:iTunesString];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (@available(iOS 10.0, *)) {
-            [[UIApplication sharedApplication] openURL:iTunesURL options:@{} completionHandler:nil];
-        } else {
-            [[UIApplication sharedApplication] openURL:iTunesURL];
-        }
+        [[UIApplication sharedApplication] openURL:iTunesURL options:@{} completionHandler:nil];
     });
 }
 
