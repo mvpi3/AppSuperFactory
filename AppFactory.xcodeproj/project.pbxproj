@@ -141,8 +141,6 @@
 		E7F8C1FE1F8F1C1600B1E14B /* CTFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C1821F8F1C1600B1E14B /* CTFeedbackViewController.m */; };
 		E7F8C1FF1F8F1C1600B1E14B /* NSBundle+CTFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C1841F8F1C1600B1E14B /* NSBundle+CTFeedback.m */; };
 		E7F8C2011F8F1C1600B1E14B /* FeedbackHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C1961F8F1C1600B1E14B /* FeedbackHelper.m */; };
-		E7F8C2021F8F1C1600B1E14B /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C1991F8F1C1600B1E14B /* HTMLParser.m */; };
-		E7F8C2031F8F1C1600B1E14B /* TFHpple+Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C19B1F8F1C1600B1E14B /* TFHpple+Tag.m */; };
 		E7F8C2041F8F1C1600B1E14B /* ImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C19E1F8F1C1600B1E14B /* ImagePickerHelper.m */; };
 		E7F8C2051F8F1C1600B1E14B /* KeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C1A11F8F1C1600B1E14B /* KeyChainWrapper.m */; };
 		E7F8C2071F8F1C1600B1E14B /* RMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C1A61F8F1C1600B1E14B /* RMessageHelper.m */; };
@@ -430,10 +428,6 @@
 		E7F8C1841F8F1C1600B1E14B /* NSBundle+CTFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CTFeedback.m"; sourceTree = "<group>"; };
 		E7F8C1951F8F1C1600B1E14B /* FeedbackHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackHelper.h; sourceTree = "<group>"; };
 		E7F8C1961F8F1C1600B1E14B /* FeedbackHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackHelper.m; sourceTree = "<group>"; };
-		E7F8C1981F8F1C1600B1E14B /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
-		E7F8C1991F8F1C1600B1E14B /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
-		E7F8C19A1F8F1C1600B1E14B /* TFHpple+Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TFHpple+Tag.h"; sourceTree = "<group>"; };
-		E7F8C19B1F8F1C1600B1E14B /* TFHpple+Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TFHpple+Tag.m"; sourceTree = "<group>"; };
 		E7F8C19D1F8F1C1600B1E14B /* ImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerHelper.h; sourceTree = "<group>"; };
 		E7F8C19E1F8F1C1600B1E14B /* ImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerHelper.m; sourceTree = "<group>"; };
 		E7F8C1A01F8F1C1600B1E14B /* KeyChainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainWrapper.h; sourceTree = "<group>"; };
@@ -1061,7 +1055,6 @@
 				E7F8C1681F8F1C1600B1E14B /* CountryPicker */,
 				E7F8C1731F8F1C1600B1E14B /* Facebook */,
 				E7F8C1781F8F1C1600B1E14B /* Feedback */,
-				E7F8C1971F8F1C1600B1E14B /* HTMLParser */,
 				E7F8C19C1F8F1C1600B1E14B /* ImagePicker */,
 				E7F8C19F1F8F1C1600B1E14B /* keyChain */,
 				E7F8C1A21F8F1C1600B1E14B /* Toast */,
@@ -1148,17 +1141,6 @@
 				E7F8C1841F8F1C1600B1E14B /* NSBundle+CTFeedback.m */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		E7F8C1971F8F1C1600B1E14B /* HTMLParser */ = {
-			isa = PBXGroup;
-			children = (
-				E7F8C1981F8F1C1600B1E14B /* HTMLParser.h */,
-				E7F8C1991F8F1C1600B1E14B /* HTMLParser.m */,
-				E7F8C19A1F8F1C1600B1E14B /* TFHpple+Tag.h */,
-				E7F8C19B1F8F1C1600B1E14B /* TFHpple+Tag.m */,
-			);
-			path = HTMLParser;
 			sourceTree = "<group>";
 		};
 		E7F8C19C1F8F1C1600B1E14B /* ImagePicker */ = {
@@ -1465,7 +1447,6 @@
 				E79A89EF23177CC90049968A /* IDMTapDetectingImageView.m in Sources */,
 				E7F8C1C31F8F1C1600B1E14B /* AFApiResponse.m in Sources */,
 				E7F8C2051F8F1C1600B1E14B /* KeyChainWrapper.m in Sources */,
-				E7F8C2021F8F1C1600B1E14B /* HTMLParser.m in Sources */,
 				E7F8C1E51F8F1C1600B1E14B /* UITextField+AFExtension.m in Sources */,
 				E7F8C1D91F8F1C1600B1E14B /* NSString+AFWebExtension.m in Sources */,
 				E79DBEEA2828F72D0067FAE8 /* UIImage+NYXRotating.m in Sources */,
@@ -1553,7 +1534,6 @@
 				E7F8C1D21F8F1C1600B1E14B /* NSDate+AFExtension.m in Sources */,
 				E7F8C20C1F8F1C1600B1E14B /* WebControllerHelper.m in Sources */,
 				E76D7DCE24C7E58A0062E0E5 /* NSArray+BlocksKit.m in Sources */,
-				E7F8C2031F8F1C1600B1E14B /* TFHpple+Tag.m in Sources */,
 				E7F8C1FC1F8F1C1600B1E14B /* CTFeedbackCellItem.m in Sources */,
 				E7F8C20A1F8F1C1600B1E14B /* UIComponentFactory.m in Sources */,
 				E7F8C1CF1F8F1C1600B1E14B /* NSMutableArray+AFExtension.m in Sources */,
