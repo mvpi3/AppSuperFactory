@@ -85,10 +85,6 @@
 		E7F4A9A41FAC05A200AE7B27 /* AFNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F4A9A31FAC05A200AE7B27 /* AFNaviBar.m */; };
 		E7F58B951FBA869500AAE7A5 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F58B941FBA869500AAE7A5 /* WKWebViewController.m */; };
 		E7F8C1C21F8F1C1600B1E14B /* AppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C0F21F8F1C1600B1E14B /* AppFactory.m */; };
-		E7F8C1C31F8F1C1600B1E14B /* AFApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C0F61F8F1C1600B1E14B /* AFApiResponse.m */; };
-		E7F8C1C41F8F1C1600B1E14B /* AFApiTaskError.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C0F81F8F1C1600B1E14B /* AFApiTaskError.m */; };
-		E7F8C1C51F8F1C1600B1E14B /* AFHTTPSessionManager+AFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C0FA1F8F1C1600B1E14B /* AFHTTPSessionManager+AFExtension.m */; };
-		E7F8C1C61F8F1C1600B1E14B /* APICategories.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C0FC1F8F1C1600B1E14B /* APICategories.m */; };
 		E7F8C1C71F8F1C1600B1E14B /* AFBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C0FF1F8F1C1600B1E14B /* AFBaseNavigationController.m */; };
 		E7F8C1C81F8F1C1600B1E14B /* AFBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C1011F8F1C1600B1E14B /* AFBaseTableViewController.m */; };
 		E7F8C1C91F8F1C1600B1E14B /* AFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F8C1031F8F1C1600B1E14B /* AFBaseViewController.m */; };
@@ -316,14 +312,6 @@
 		E7F58B941FBA869500AAE7A5 /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 		E7F8C0F11F8F1C1600B1E14B /* AppFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppFactory.h; sourceTree = "<group>"; };
 		E7F8C0F21F8F1C1600B1E14B /* AppFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppFactory.m; sourceTree = "<group>"; };
-		E7F8C0F51F8F1C1600B1E14B /* AFApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFApiResponse.h; sourceTree = "<group>"; };
-		E7F8C0F61F8F1C1600B1E14B /* AFApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFApiResponse.m; sourceTree = "<group>"; };
-		E7F8C0F71F8F1C1600B1E14B /* AFApiTaskError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFApiTaskError.h; sourceTree = "<group>"; };
-		E7F8C0F81F8F1C1600B1E14B /* AFApiTaskError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFApiTaskError.m; sourceTree = "<group>"; };
-		E7F8C0F91F8F1C1600B1E14B /* AFHTTPSessionManager+AFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+AFExtension.h"; sourceTree = "<group>"; };
-		E7F8C0FA1F8F1C1600B1E14B /* AFHTTPSessionManager+AFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+AFExtension.m"; sourceTree = "<group>"; };
-		E7F8C0FB1F8F1C1600B1E14B /* APICategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICategories.h; sourceTree = "<group>"; };
-		E7F8C0FC1F8F1C1600B1E14B /* APICategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICategories.m; sourceTree = "<group>"; };
 		E7F8C0FE1F8F1C1600B1E14B /* AFBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFBaseNavigationController.h; sourceTree = "<group>"; };
 		E7F8C0FF1F8F1C1600B1E14B /* AFBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFBaseNavigationController.m; sourceTree = "<group>"; };
 		E7F8C1001F8F1C1600B1E14B /* AFBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFBaseTableViewController.h; sourceTree = "<group>"; };
@@ -818,7 +806,6 @@
 			isa = PBXGroup;
 			children = (
 				E79A89D923177CC90049968A /* Libs */,
-				E7F8C0F41F8F1C1600B1E14B /* API */,
 				E7F8C0FD1F8F1C1600B1E14B /* Base */,
 				E7F8C10B1F8F1C1600B1E14B /* Extension */,
 				E7F8C15F1F8F1C1600B1E14B /* Helper */,
@@ -826,21 +813,6 @@
 				E7F8C1BB1F8F1C1600B1E14B /* Views */,
 			);
 			path = Class;
-			sourceTree = "<group>";
-		};
-		E7F8C0F41F8F1C1600B1E14B /* API */ = {
-			isa = PBXGroup;
-			children = (
-				E7F8C0F51F8F1C1600B1E14B /* AFApiResponse.h */,
-				E7F8C0F61F8F1C1600B1E14B /* AFApiResponse.m */,
-				E7F8C0F71F8F1C1600B1E14B /* AFApiTaskError.h */,
-				E7F8C0F81F8F1C1600B1E14B /* AFApiTaskError.m */,
-				E7F8C0F91F8F1C1600B1E14B /* AFHTTPSessionManager+AFExtension.h */,
-				E7F8C0FA1F8F1C1600B1E14B /* AFHTTPSessionManager+AFExtension.m */,
-				E7F8C0FB1F8F1C1600B1E14B /* APICategories.h */,
-				E7F8C0FC1F8F1C1600B1E14B /* APICategories.m */,
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		E7F8C0FD1F8F1C1600B1E14B /* Base */ = {
@@ -1443,7 +1415,6 @@
 				E76D7DC924C7E58A0062E0E5 /* NSInvocation+BlocksKit.m in Sources */,
 				E7074E59200853680030D946 /* UITextView+Placeholder.m in Sources */,
 				E79A89EF23177CC90049968A /* IDMTapDetectingImageView.m in Sources */,
-				E7F8C1C31F8F1C1600B1E14B /* AFApiResponse.m in Sources */,
 				E7F8C2051F8F1C1600B1E14B /* KeyChainWrapper.m in Sources */,
 				E7F8C1E51F8F1C1600B1E14B /* UITextField+AFExtension.m in Sources */,
 				E7F8C1D91F8F1C1600B1E14B /* NSString+AFWebExtension.m in Sources */,
@@ -1493,9 +1464,7 @@
 				E7F8C1D31F8F1C1600B1E14B /* NSURL+AFExtension.m in Sources */,
 				E7F8C20D1F8F1C1600B1E14B /* AFSearchBarView.m in Sources */,
 				E7F8C1F81F8F1C1600B1E14B /* CountryModel.m in Sources */,
-				E7F8C1C41F8F1C1600B1E14B /* AFApiTaskError.m in Sources */,
 				E74174561FA03D6B009456FD /* RACSubject+AFThrottle.m in Sources */,
-				E7F8C1C61F8F1C1600B1E14B /* APICategories.m in Sources */,
 				E7F8C1D61F8F1C1600B1E14B /* NSString+AFExtension.m in Sources */,
 				E70DE2D0202AA920006DDD1E /* TabBarViewController.m in Sources */,
 				E79A89F523177CC90049968A /* IDMTapDetectingView.m in Sources */,
@@ -1561,7 +1530,6 @@
 				E722EB661F98867F0027CC05 /* FBSSOResult.m in Sources */,
 				E76D7DD524C7E58A0062E0E5 /* UIView+BlocksKit.m in Sources */,
 				E76A145B28349253002C01B0 /* NSString+HTML.m in Sources */,
-				E7F8C1C51F8F1C1600B1E14B /* AFHTTPSessionManager+AFExtension.m in Sources */,
 				E7AF70C51FB036810040904F /* AFRefreshHeader.m in Sources */,
 				E76D7DDD24C7E58A0062E0E5 /* MFMessageComposeViewController+BlocksKit.m in Sources */,
 				E78E60011FA07A6D00EA022E /* LightBoxWrapper.m in Sources */,
