@@ -10,6 +10,7 @@
 #import <pop/POP.h>
 #import "BlocksKit+UIKit.h"
 #import <ViewUtils/ViewUtils.h>
+#import "View+MASAdditions.h"
 
 @interface LightBoxWrapper() <UIGestureRecognizerDelegate>
 
@@ -94,6 +95,14 @@
     
     self.contentView = contentView;
     [self addSubview:self.contentView];
+    
+    if (self.contentView.width == 0 && self.contentView.height == 0) {
+        [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.mas_centerX);
+            make.centerY.equalTo(self.mas_centerY);
+        }];
+    }
+    
     if(self.showOnTheView){
         [self.showOnTheView addSubview:self];
     }else{
