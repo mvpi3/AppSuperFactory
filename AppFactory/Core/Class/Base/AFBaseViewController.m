@@ -13,6 +13,10 @@
 #import "AppFactory.h"
 #import "LibsHeader.h"
 
+static NSString *kBackButtonImageName = nil;
+static NSString *kCancelButtonImageName = nil;
+
+
 @interface AFBaseViewController ()
 
 @property (nonatomic)BOOL isFirstTimeWillAppeared;
@@ -21,6 +25,16 @@
 @end
 
 @implementation AFBaseViewController
+
++(void)setBackButtonImageName:(NSString *)imgName
+{
+    kBackButtonImageName = imgName;
+}
+
++(void)setCancelButtonImageName:(NSString *)imgName
+{
+    kCancelButtonImageName = imgName;
+}
 
 #pragma mark - Life Cycle
 
@@ -39,7 +53,13 @@
     
     if(![self isRootViewController]){
         __weak __typeof(self) weakSelf = self;
-        UIImage *back = AF_BUNDLE_IMAGE(@"navi-back");
+        UIImage *back = nil;
+        if(kBackButtonImageName){
+            back = [UIImage imageNamed:kBackButtonImageName];
+        }
+        if(!back){
+            back = AF_BUNDLE_IMAGE(@"navi-back");
+        }
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc] bk_initWithImage:back style:UIBarButtonItemStylePlain handler:^(id sender) {
             [weakSelf popViewController];
         }];
@@ -275,7 +295,13 @@
 
 - (void)addCancelButtonWithBlock:(void (^)(void))block
 {
-    UIImage *back = AF_BUNDLE_IMAGE(@"navi-cross");
+    UIImage *back = nil;
+    if(kCancelButtonImageName){
+        back = [UIImage imageNamed:kCancelButtonImageName];
+    }
+    if(!back){
+        back = AF_BUNDLE_IMAGE(@"navi-cross");
+    }
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] bk_initWithImage:back style:UIBarButtonItemStylePlain handler:^(id sender) {
         if(block) block();
     }];

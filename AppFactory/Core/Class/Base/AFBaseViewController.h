@@ -37,6 +37,9 @@ static NSString *updateNotiPrefix = @"AF_UPDATE_BASE_VC_";
 @property (nonatomic) float keyboardHeight;
 @property (nonatomic) BOOL isFullScreenViewController;
 
++(void)setBackButtonImageName:(NSString *)imgName;
++(void)setCancelButtonImageName:(NSString *)imgName;
+
 -(void)pushViewController:(id)viewController;
 -(void)pushViewController:(id)viewController withAnimated:(BOOL)animated;
 
