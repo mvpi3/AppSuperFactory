@@ -152,6 +152,10 @@
     if(!task){
         return;
     }
+    
+    if(![task isKindOfClass:[NSURLSessionTask class]]){
+        return;
+    }
 
     [_task cancel];
     _task = task;
