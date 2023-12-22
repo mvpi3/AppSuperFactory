@@ -606,6 +606,9 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 }
 
 - (UIImage*)getImageFromView:(UIView *)view {
+    if(!view){
+        return nil;
+    }
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, 2);
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
