@@ -124,8 +124,8 @@
     NotificationNumberView *no  = [NotificationNumberView view];
     no.circleRadius = 10;
     no.number = 9;
-    no.left = 100;
-    no.top = 90;
+    no.centerX = self.view.width/2;
+    no.top = 0;
     [self.view  addSubview:no];
 }
 
@@ -342,6 +342,7 @@
     AFBaseTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"123"];
     NSInteger r = arc4random()%999;
     cell.textLabel.text = INT2STR(r);
+    cell.textLabel.textColor = [UIColor blackColor];
 //    cell.cellHighLightStyle = CellHighLightStyleNone;
     
     return cell;

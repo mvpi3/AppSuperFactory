@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -81,6 +81,7 @@
 		E7AF70C51FB036810040904F /* AFRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AF70C41FB036810040904F /* AFRefreshHeader.m */; };
 		E7C20AD61F906A16004B70E0 /* CTFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7C20AD51F906A16004B70E0 /* CTFeedback.bundle */; };
 		E7DA719E2B833B2F006F1129 /* AppFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA719D2B833B2F006F1129 /* AppFactoryTests.swift */; };
+		E7DA71A62B834326006F1129 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = E7DA71A52B834326006F1129 /* PKHUD */; };
 		E7E8E05B283488DF001EF76D /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E8E05A283488DF001EF76D /* TTTAttributedLabel.m */; };
 		E7F4A97D1FA9A5CD00AE7B27 /* AFButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F4A97C1FA9A5CD00AE7B27 /* AFButtonsView.m */; };
 		E7F4A9A41FAC05A200AE7B27 /* AFNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F4A9A31FAC05A200AE7B27 /* AFNaviBar.m */; };
@@ -465,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31177A34D2ACFD80D51F3D30 /* Pods_AppFactory.framework in Frameworks */,
+				E7DA71A62B834326006F1129 /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1293,6 +1295,9 @@
 			dependencies = (
 			);
 			name = AppFactory;
+			packageProductDependencies = (
+				E7DA71A52B834326006F1129 /* PKHUD */,
+			);
 			productName = AppFactory;
 			productReference = E7905D441F7A32E4006CC6F5 /* AppFactory.app */;
 			productType = "com.apple.product-type.application";
@@ -1331,7 +1336,6 @@
 					};
 					E7DA719A2B833B2F006F1129 = {
 						CreatedOnToolsVersion = 15.0.1;
-						ProvisioningStyle = Automatic;
 						TestTargetID = E7905D431F7A32E4006CC6F5;
 					};
 				};
@@ -1345,6 +1349,9 @@
 				"zh-Hant",
 			);
 			mainGroup = E7905D3B1F7A32E4006CC6F5;
+			packageReferences = (
+				E7DA71A42B834326006F1129 /* XCRemoteSwiftPackageReference "PKHUD" */,
+			);
 			productRefGroup = E7905D451F7A32E4006CC6F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1751,7 +1758,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AppFactory/AppFactory-Prefix.pch";
 				INFOPLIST_FILE = AppFactory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.install.www.AppFactory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1771,7 +1781,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AppFactory/AppFactory-Prefix.pch";
 				INFOPLIST_FILE = AppFactory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.install.www.AppFactory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1865,6 +1878,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E7DA71A42B834326006F1129 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7DA71A52B834326006F1129 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7DA71A42B834326006F1129 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7905D3C1F7A32E4006CC6F5 /* Project object */;
 }
