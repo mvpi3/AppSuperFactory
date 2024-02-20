@@ -23,6 +23,7 @@
     
     [self addIPhoneXTabBarIfNeed];
     
+    
     ViewController *vc1 = [[ViewController alloc] init];
     AFBaseNavigationController *navi1 =[AFBaseNavigationController navigationWithRootViewController:vc1];
     UITabBarItem *tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"1" image:nil selectedImage:nil];

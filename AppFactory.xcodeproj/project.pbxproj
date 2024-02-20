@@ -318,6 +318,7 @@
 		E7DA719D2B833B2F006F1129 /* AppFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactoryTests.swift; sourceTree = "<group>"; };
 		E7E8E059283488DF001EF76D /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		E7E8E05A283488DF001EF76D /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		E7F1962D2B84A1AE0056F94B /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 		E7F4A97B1FA9A5CD00AE7B27 /* AFButtonsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFButtonsView.h; sourceTree = "<group>"; };
 		E7F4A97C1FA9A5CD00AE7B27 /* AFButtonsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFButtonsView.m; sourceTree = "<group>"; };
 		E7F4A9A21FAC05A200AE7B27 /* AFNaviBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNaviBar.h; sourceTree = "<group>"; };
@@ -715,6 +716,7 @@
 		E7905D3B1F7A32E4006CC6F5 = {
 			isa = PBXGroup;
 			children = (
+				E7F1962C2B84A1AE0056F94B /* ci_scripts */,
 				E7905D461F7A32E4006CC6F5 /* AppFactory */,
 				E7AD2E311F8DA8EA00F8E58A /* bundle */,
 				E7DA719C2B833B2F006F1129 /* AppFactoryTests */,
@@ -811,6 +813,14 @@
 				E7E8E05A283488DF001EF76D /* TTTAttributedLabel.m */,
 			);
 			path = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
+		E7F1962C2B84A1AE0056F94B /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E7F1962D2B84A1AE0056F94B /* ci_post_clone.sh */,
+			);
+			path = ci_scripts;
 			sourceTree = "<group>";
 		};
 		E7F4A9A11FAC058600AE7B27 /* NaviBar */ = {

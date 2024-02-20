@@ -14,6 +14,9 @@
 #brew install ruby
 
 brew install cocoapods
+
+echo ">>> INSTALL OCLINT"
+brew install oclint
  
 #echo ">>> INSTALL DEPENDENCIES"
 #gem install cocoapods --install-dir $GEM_HOME
