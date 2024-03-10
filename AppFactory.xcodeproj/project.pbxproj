@@ -319,6 +319,8 @@
 		E7E8E059283488DF001EF76D /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		E7E8E05A283488DF001EF76D /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		E7F1962D2B84A1AE0056F94B /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
+		E7F1962E2B85F3040056F94B /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
+		E7F1962F2B85F3040056F94B /* ci_post_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_xcodebuild.sh; sourceTree = "<group>"; };
 		E7F4A97B1FA9A5CD00AE7B27 /* AFButtonsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFButtonsView.h; sourceTree = "<group>"; };
 		E7F4A97C1FA9A5CD00AE7B27 /* AFButtonsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFButtonsView.m; sourceTree = "<group>"; };
 		E7F4A9A21FAC05A200AE7B27 /* AFNaviBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNaviBar.h; sourceTree = "<group>"; };
@@ -818,6 +820,8 @@
 		E7F1962C2B84A1AE0056F94B /* ci_scripts */ = {
 			isa = PBXGroup;
 			children = (
+				E7F1962F2B85F3040056F94B /* ci_post_xcodebuild.sh */,
+				E7F1962E2B85F3040056F94B /* ci_pre_xcodebuild.sh */,
 				E7F1962D2B84A1AE0056F94B /* ci_post_clone.sh */,
 			);
 			path = ci_scripts;
