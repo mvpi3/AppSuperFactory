@@ -29,6 +29,7 @@
     
     
     
+    
     TabBarViewController *tab = [[TabBarViewController alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = tab;
