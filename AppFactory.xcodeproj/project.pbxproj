@@ -1346,7 +1346,6 @@
 				TargetAttributes = {
 					E7905D431F7A32E4006CC6F5 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
 					};
 					E7DA719A2B833B2F006F1129 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -1767,8 +1766,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AL96U4VCLS;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AppFactory/AppFactory-Prefix.pch";
 				INFOPLIST_FILE = AppFactory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1778,6 +1777,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.install.www.AppFactory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1790,8 +1790,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AL96U4VCLS;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AL96U4VCLS;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AppFactory/AppFactory-Prefix.pch";
 				INFOPLIST_FILE = AppFactory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1801,6 +1803,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.install.www.AppFactory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "app factory testflight";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
